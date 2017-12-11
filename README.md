@@ -5,7 +5,7 @@ application up and running.
 
 Things you may want to cover:
 
-###Ruby version
+### Ruby version
 2.3.1
 
 * System dependencies
@@ -15,8 +15,9 @@ Things you may want to cover:
 * Database creation
 
 ##Database design
+## Database design
 
-###user table < devise
+### user table < devise
 
 |Column|Type|Options|
 |------|----|-------|
@@ -24,11 +25,11 @@ Things you may want to cover:
 |e-mail|string|null: false|
 |password|string|null: false|
 
-####Association
+#### Association
 - has_many :groups, through: :members
 - has_many :messages
 
-###message table
+### message table
 
 |Column|Type|Options|
 |------|----|-------|
@@ -37,28 +38,28 @@ Things you may want to cover:
 |body|text|null: false|
 |image|string|null: false|
 
-####Association
+#### Association
 - belongs_to :user
 - belongs_to :group
 
-###chat-grp => group table
+### chat-grp => group table
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 
-####Association
+#### Association
 - has_many :users, through: :members
 - has_many :messages
 
-###members table
+### members table
 
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
-####Association
+#### Association
 - belongs_to :group
 - belongs_to :user
 
