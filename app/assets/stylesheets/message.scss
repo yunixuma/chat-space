@@ -1,45 +1,29 @@
 // Place all the styles related to the message controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-*, *:before, *:after {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-         -o-box-sizing: border-box;
-        -ms-box-sizing: border-box;
-            box-sizing: border-box;
-}
-body {
-  weight: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
 .summary {
   float: left;
   padding: 35px 20px;
-  width: 300px;
+  width: calc(300px - 40px);
   height: 100%;
   background-color: #312541;
   color: #fff;
 }
 
 .user {
-  &:after {
-    clearfix: both;
-  }
   #{&}__name {
-    float:left;
     font-size: 16px;
     font-weight: bold;
   }
   #{&}__action {
-    float: right;
+    li {
+    }
   }
 }
 
 .groups {
   padding-top: 20px;
   padding-bottom: 40px;
-  overflow: auto;
   #{&}__title {
     font-size: 15px;
   }
@@ -53,71 +37,44 @@ body {
   &:after {
     clearfix: both;
   }
-  float: left;
-  width: calc(100vw - 300px);
+  float: right;
+  padding: 35px 40px;
+  width: calc(100vw - 300px - 80px);
   height: 100%;
-//  background-color: #31ff41;
 }
 
-.group {
-  width: 100%;
-  height: 120px;
-  padding: 35px 40px 18px 40px;
-  border-bottom-style: solid;
-  border-bottom-color: #eee;
-  &:after{
-    clearfix: both;
-  }
+.header {
+  margin-bottom: 46px;
   #{&}__title {
     font-size: 20px;
     color: #333;
   }
   #{&}__members {
-    margin-top: 15px;
-    font-size: 12px;
-    color: #999;
+  font-size: 12px;
+  color: #999;
+    &:after {
+      clearfix: both;
+    }
   }
   #{&}__members-subject {
+    float: left;
     display: inline-block;
   }
   #{&}__members-name {
+    float: left;
     margin-left: 1em;
     display: inline-block;
   }
-  #{&}__edit-button {
-    position: absolute;
-    top: 28px;
-    right: 40px;
-    display: table;
-    width: calc(2em + 40px);
-    height: 40px;
-    padding: 7px 20px;
-    text-align: center;
-    border-style: solid;
-    border-color: #39f;
-    &--text {
-      display: table-cell;
-      font-size: 14px;
-    }
-  }
-}
-.post-area {
-  width: calc(100% - 80px);
-  height: calc(100% - 210px);
-  padding: 46px 40px 10px 40px;
-  overflow: auto;
-  background-color: #aaa;
 }
 
 .post {
-  margin-bottom: 40px;
+  margin-top: 40px;
    color: #435A54;
   #{&}__header {
   }
   #{&}__sender {
     display: inline-block;
     font-size: 16px;
-    font-weight: bold;
   }
   #{&}__timestamp {
     margin-left: 10px;
@@ -131,45 +88,16 @@ body {
 }
 
 .compose {
-  padding: 20px 40px 20px 50px;
-  width: 100%;
-  height: 50px;
-  &:after {
-    clearfix: both;
-  }
+  position: fixed;
+  margin: 20px 0 20px 0;
   #{&}__textarea {
-    float: left;
-    font-size: 16px;
-    color: #434A54;
+  font-size: 16px;
+  color: #434A54;
   }
   #{&}__image-select {
-    float: right;
-    display: table;
-    width: calc(1em + 10px);
-    height: 50px;
-    padding: 10px 10px;
-    text-align: center;
-    border-style: solid;
-    border-color: #39f;
-    &--icon {
-      display: table-cell;
-      font-size: 16px;
-    }
+    
   }
   #{&}__send-button {
-    float: right;
-    display: table;
-    width: calc(2em + 60px);
-    height: 50px;
-    margin-left: 15px;
-    padding: 10px 30px;
-    text-align: center;
-    border-style: solid;
-    border-color: #39f;
-    background-color: #38AEF0;
-    &--text {
-      display: table-cell;
-      font-size: 16px;
-    }
+    
   }
 }
