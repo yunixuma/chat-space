@@ -3,10 +3,8 @@
     %div.user__name
       ryosukemaehara
     %div.user__action
-      %li
-        fa_stacked_icon "twitter", base: "square-o"
-      %li
-        fa_stacked_icon "dollar inverse", base: "circle", class: "fa-5x"
+      %i.fa.fa-pencil-square-o
+      %i.fa.fa-cog
   %div.groups
     %div.groups__title
       神
@@ -25,38 +23,49 @@
       まだメッセージはありません
 
 %main.thread
-  %div.header
-    %h2.header__title
+  %div.group
+    %h2.group__title
       sampleグループ
-    %div.header__members
-      %span.herder__members-subject
+    %div.group__members
+      %span.group__members-subject
         Member:
-      %span.header__members-name
+      %span.group__members-name
         ryosukemaehira
-  %div.post
-    %div.post__header
-      %span.post__sender
-        ryosukemaehira
-      %span.post__timestamp
-        2016/10/02 06:27:14
-    %div.post__body
-      なるほど
+    %div.group__edit-button
+      %div.group__edit-button--text
+        Edit
+  %div.post-area
+    %div.post
+      %div.post__header
+        %span.post__sender
+          ryosukemaehira
+        %span.post__timestamp
+          2016/10/02 06:27:14
+      %div.post__body
+        なるほど
 
-  %div.post
-    %div.post__header
-      %span.post__sender
-        ryosukemaehira
-      %span.post__timestamp
-        2016/10/02 06:27:25
-    %div.post__body
-      水色きれい
-  %div.post
-    %div.post__header
-      %span.post__sender
-        ryosukemaehira
-      %span.post__timestamp
-        2016/10/02 06:27:30
-    %div.post__body
-      お腹すいた
+    %div.post
+      %div.post__header
+        %span.post__sender
+          ryosukemaehira
+        %span.post__timestamp
+          2016/10/02 06:27:25
+      %div.post__body
+        水色きれい
+    %div.post
+      %div.post__header
+        %span.post__sender
+          ryosukemaehira
+        %span.post__timestamp
+          2016/10/02 06:27:30
+      %div.post__body
+        お腹すいた
   %div.compose
-    Chatspace
+    %div.compose__textarea
+      Chatspace
+    %div.compose__send-button
+      %div.compose__send-button--text
+        Send
+    %div.compose__image-select
+      %div.compose__send-button--icon
+        %i.fa.fa-file-image-o
