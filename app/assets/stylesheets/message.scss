@@ -23,8 +23,9 @@ body {
 }
 
 .user {
+  height: 85px;
   &:after {
-    clearfix: both;
+    clear: both;
   }
   #{&}__name {
     float:left;
@@ -36,9 +37,12 @@ body {
   }
 }
 
-.groups {
+.own {
+  clear: both;
   padding-top: 20px;
-  padding-bottom: 40px;
+}
+.groups {
+  margin-bottom: 40px;
   overflow: auto;
   #{&}__title {
     font-size: 15px;
@@ -51,7 +55,7 @@ body {
 
 .thread {
   &:after {
-    clearfix: both;
+    clear: both;
   }
   float: left;
   width: calc(100vw - 300px);
@@ -66,9 +70,10 @@ body {
   border-bottom-style: solid;
   border-bottom-color: #eee;
   &:after{
-    clearfix: both;
+    clear: both;
   }
   #{&}__title {
+    padding: 0;
     font-size: 20px;
     color: #333;
   }
@@ -135,7 +140,7 @@ body {
   width: 100%;
   height: 50px;
   &:after {
-    clearfix: both;
+    clear: both;
   }
   #{&}__textarea {
     float: left;
