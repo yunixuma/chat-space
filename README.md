@@ -21,7 +21,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|username|string|null: false|
 |e-mail|string|null: false|
 |password|string|null: false|
 

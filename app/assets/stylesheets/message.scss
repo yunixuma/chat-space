@@ -20,6 +20,9 @@ body {
   height: 100%;
   background-color: #312541;
   color: #fff;
+  & a {
+    color: #0ff;
+  }
 }
 
 .user {
@@ -40,10 +43,10 @@ body {
 .own {
   clear: both;
   padding-top: 20px;
+  overflow: auto;
 }
 .groups {
   margin-bottom: 40px;
-  overflow: auto;
   #{&}__title {
     font-size: 15px;
   }
