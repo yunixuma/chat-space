@@ -1,10 +1,23 @@
 %aside.summary
   %div.user
-    %div.user__name
-      ryosukemaehara
-    %div.user__action
-      %i.fa.fa-pencil-square-o
-      %i.fa.fa-cog
+    - if user_signed_in?
+      %div.user__name
+        = current_user.username
+      %div.user__action
+        %i.fa.fa-pencil-square-o
+        %i.fa.fa-cog
+        = link_to "/users/sign_out", method: :delete do
+          %i.fa.fa-sign-out
+            %small sign out
+    - else
+      %div.user__name
+        = link_to "/users/sign_up" do
+          %i.fa.fa-user-plus
+            %small sign up
+      %div.user__action
+        = link_to "/users/sign_in" do
+          %i.fa.fa-sign-in
+            %small sign in
   %div.own
     %div.groups
       %div.groups__title

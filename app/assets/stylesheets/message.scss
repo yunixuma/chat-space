@@ -20,6 +20,9 @@ body {
   height: 100%;
   background-color: #312541;
   color: #fff;
+  & a {
+    color: #0ff;
+  }
 }
 
 .user {
