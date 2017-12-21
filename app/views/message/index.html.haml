@@ -5,10 +5,8 @@
         = current_user.username
       %div.user__action
         %i.fa.fa-pencil-square-o
-        %i.fa.fa-cog
-        = link_to "/users/sign_out", method: :delete do
-          %i.fa.fa-sign-out
-            %small sign out
+        = link_to "/users/edit" do
+          %i.fa.fa-cog
     - else
       %div.user__name
         = link_to "/users/sign_up" do
